@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3enRaya ByElimelech</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="ganadores" class="absolute w-screen h-screen flex justify-center items-center bg-green-400/90 z-40 hidden">
+        <p id="ganador" class="text-5xl font-bold text-black"></p>
+    </div>
+    <div class="w-screen h-30 justify-center items-center grid-score py-10 px-20">
+        <p class="t-score flex justify-center items-center text-3xl font-bold">SCORE</p>
+        <p class="t-jugadorx text-3xl font-bold">X</p>
+        <p id="scoreJugadorx" class="scorex w-24 h-16 bg-red-600 flex justify-center text-white items-center text-4xl rounded-2xl">0</p>
+        <p id="scoreJugadoro" class="scoreo w-24 h-16 bg-red-600 flex justify-center text-white items-center text-4xl rounded-2xl">0</p>
+        <p class="t-jugadoro text-3xl font-bold">O</p>
+        
+    </div>
+    <div class="flex justify-center items-center h-10 w-screen">
+        <p id="turnode" class="text-3xl font-bold">TURNO</p>
+    </div>
+    
+    <div id="tablero" class="tablero">
+        
+    </div>
+    <div class="flex justify-center items-center">
+        <button class="reset w-36 h-12 bg-red-600 rounded-2xl text-white">Reiniciar Juego</button>
+    </div>
+</body>
+<script src="js/main.js"></script>
+</html>

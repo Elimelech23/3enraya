@@ -1,0 +1,291 @@
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+
+
+
+
+body {
+    
+   
+    
+    text-align: center;
+    /* img size is 50x50 */
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+    -webkit-animation: bg-scrolling-reverse .92s infinite;
+    /* Safari 4+ */
+    -moz-animation: bg-scrolling-reverse .92s infinite;
+    /* Fx 5+ */
+    -o-animation: bg-scrolling-reverse .92s infinite;
+    /* Opera 12+ */
+    animation: bg-scrolling-reverse .92s infinite;
+    /* IE 10+ */
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+    
+  }
+  body::before {
+    font-size: 8rem;
+    font-weight: 100;
+    font-style: normal;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grid-score{
+    display: grid;
+    grid-template-areas:
+    'score score score score'
+    'jugadorx scorejugadorx scorejugadoro jugadoro' ;
+    gap: 20px;
+    padding: 10px;
+}
+
+.t-score{
+    grid-area: score;
+}
+
+.t-jugadorx{
+    grid-area: jugadorx;
+}
+
+
+.scorex{
+    grid-area: scorejugadorx;
+}
+
+.t-jugadoro{
+    grid-area: jugadoro;
+}
+
+.scoreo{
+    grid-area: scorejugadoro;
+}
+
+
+
+
+
+.tablero{
+    position: relative;
+    width: 100vw;
+    height: 54vh;
+    padding-top: 100px;
+    justify-content: center;
+    align-content: flex-start;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    
+    
+    
+}
+
+.casilla{
+    
+    border: 5px solid rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casilla:hover{
+    cursor: pointer;
+}
+
+.casilla:nth-child(1), .casilla:nth-child(2), .casilla:nth-child(3){
+    border-top: unset;
+    
+}
+
+.casilla:nth-child(1), .casilla:nth-child(4), .casilla:nth-child(7){
+    border-left: unset;
+}
+
+.casilla:nth-child(3), .casilla:nth-child(6), .casilla:nth-child(9){
+    border-right: unset;
+}
+
+.casilla:nth-child(7), .casilla:nth-child(8), .casilla:nth-child(9){
+    border-bottom: unset;
+}
+
+
+
+.x{
+    background-image: url(../image/x.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.o{
+    background-image: url(../image/circulo.png);
+    background-position: center center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+}
+
+.line-winner-1{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 80px;
+    
+}
+
+.line-winner-2{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -20px;
+    
+    
+}
+
+.line-winner-3{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: -120px;
+    
+    
+}
+
+.line-winner-4{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(45deg);
+    bottom: -30px;
+    
+}
+
+.line-winner-5{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(-45deg);
+    bottom: -30px;
+    
+}
+
+.line-winner-6{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -100px;
+    transform: rotate(90deg);
+    bottom: -30px;
+    
+}
+
+.line-winner-7{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transform: rotate(90deg);
+    bottom: -30px;
+    
+}
+
+.line-winner-8{
+    background-image: url(../image/linea1.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 105px;
+    transform: rotate(90deg);
+    bottom: -30px;
+    
+}
+
