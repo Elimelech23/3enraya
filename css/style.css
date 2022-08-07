@@ -1,10 +1,5 @@
-/* Cool infinite background scrolling animation.
- * Twitter: @kootoopas
- */
-/* Exo thin font from Google. */
-@import url(https://fonts.googleapis.com/css?family=Exo:100);
-/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
-/* Animations */
+
+
 @-webkit-keyframes bg-scrolling-reverse {
   100% {
     background-position: 50px 50px;
@@ -47,11 +42,7 @@
 }
 
 
-
-
 body {
-    
-   
     
     text-align: center;
     /* img size is 50x50 */
@@ -75,24 +66,6 @@ body {
     font-weight: 100;
     font-style: normal;
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
