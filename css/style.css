@@ -239,6 +239,8 @@ body {
     
 }
 
+
+
 .line-winner-5{
     background-image: url(../image/linea1.png);
     background-position: center center;
@@ -289,3 +291,80 @@ body {
     
 }
 
+
+@media (max-height: 763px){
+    .responsiveh{
+        margin-top: 110px;
+    }
+}
+
+
+@media (max-height: 656px){
+    .line-winner-1{
+        bottom: 25px;
+    }
+
+    .line-winner-2{
+        bottom: -70px;
+    }
+
+    .line-winner-3{
+        bottom: -170px;
+    }
+
+
+    .line-winner-4{
+        bottom: -80px;
+    }
+
+    .line-winner-5{
+        bottom: -80px;
+    }
+
+    .line-winner-6{
+        bottom: -80px;
+    }
+
+    .line-winner-7{
+        bottom: -80px;
+    }
+
+    .line-winner-8{
+        bottom: -80px;
+    }
+}
+
+@media (min-height: 914px){
+    .line-winner-1{
+        bottom: 120px;
+    }
+
+    .line-winner-2{
+        bottom: 15px;
+    }
+
+    .line-winner-3{
+        bottom: -85px;
+    }
+
+
+    .line-winner-4{
+        bottom: 10px;
+    }
+
+    .line-winner-5{
+        bottom: 10px;
+    }
+
+    .line-winner-6{
+        bottom: -20px;
+    }
+
+    .line-winner-7{
+        bottom: -20px;
+    }
+
+    .line-winner-8{
+        bottom: -20px;
+    }
+}
